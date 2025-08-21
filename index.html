@@ -1,17 +1,59 @@
 <!doctype html>
 <html lang="en">
   <head>
+     <link rel="icon" type="image/png" href="https://i.redd.it/3clwir1my4ka1.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ULTRAKILL</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    
+    <!--PARA LA FUENTE Y EL CUADRO (el cambio de notaciones en los comentarios es porque estas no me funcionan en el de estilo)-->
+    <style>
+      @font-face {
+        font-family: "VCR OSD Mono";
+        src: url("fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
+      }
+      
+      .vcr-font {
+         font-family: "VCR OSD Mono", monospace;
+      }
+      .vcr-box {
+        font-size: 105%;
+        text-align: left;
+        padding: 0.4em 0.6em;
+        border: 5px solid white;
+        border-radius: 5px;
+        background: rgba(0,0,0,0.7); /*Se supone esto hace el cuadrito pero ni idea por qué no me funciona*/
+        display: flex;
+        color: red;
+        text-align: center;
+      }
+
+    /*PARA EL BOTON Y SUS ANIMACIONES*/
+      .my-custom-btn {
+      background-color: red;   
+      color: white;            
+      border: 2px solid white;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-family: "VCR OSD Mono", monospace;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+      }
+
+      .my-custom-btn:hover {
+      background-color: black; 
+      color: red; 
+      border-color: red;
+      }
+    </style>
   </head>
   
   <body>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   </body>
-</html>
+</html> 
 
 
 
@@ -21,17 +63,17 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">ULTRAKILL</a>
+                <a class="navbar-brand">ULTRAKILL</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Características</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Reseñas</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Comprar</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#contenido">Contenido</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#resenas">Reseñas</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#contacto">Contacto</a></li>
                 </ul>
-            </div>
+              </div>
             </div>
         </nav>
     </header>
@@ -45,14 +87,17 @@
         <section class="py-5 text-center container">
             <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/logo_thumb/a73921413f345d23f9679a0678fce5c1.png" class="img-fluid mb-4" style="width: 7000px; height: 100px; object-fit: cover;" alt="Foto de perfil">
-                <big><big><div style="font-family:VCR OSD Extended Mono; font-size:105%; text-align:left; padding:0.4em 0.6em; border:5px solid white; border-radius:5px; background:rgba(0,0,0,0.7); display:flex"><span style="margin:auto"><div style="text-align:center; color:red">MANKIND IS DEAD<br />BLOOD IS FUEL<br />HELL IS FULL</div></span></div></big></big>
-                <h1 class="fw-light">Sinopsis</h1>
+              <!--LOGO-->  
+              <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/logo_thumb/a73921413f345d23f9679a0678fce5c1.png" class="img-fluid mb-4" style="object-fit: cover;" alt="logo">
+                <!--PARA EL CUADRO-->
+              <big><big><div class="vcr-font vcr-box">
+              <span style="margin:auto; font-size:105%; text-align:left; padding:0.4em 0.6em; border:5px solid white; border-radius:5px; background:rgba(0,0,0,0.7); display:flex"><span style="margin:auto"><div style="text-align:center; color:red">MANKIND IS DEAD<br />BLOOD IS FUEL<br />HELL IS FULL</div></span></div></big></big>
+              <h1 class="vcr-font">Sinopsis</h1>
                 <p class="lead text-muted">ULTRAKILL es un videojuego de disparos en primera persona (FPS) desarrollado por Arsi "Hakita" Patala y publicado por New Blood Interactive el 3 de septiembre de 2020. Es conocido por su jugabilidad rápida y frenética, inspirada en clásicos de los FPS de los años 90 como Doom, Quake y Devil May Cry.</p>
                 <p>
-                    <a href="#" class="btn btn-primary my-2">Ver trailer</a>
-                    <a href="https://youtu.be/_NRMUN55jOg?si=GV7RAsN8ud71teDO"></a>
-                    <a href="#" class="btn btn-secondary my-2">Pre-ordena ya!!!</a> <!--asd-->
+                  <!--BOTONES DE REDIRECCION-->
+                  <a href="https://youtu.be/_NRMUN55jOg?si=GV7RAsN8ud71teDO" class="btn my-custom-btn"target="_blank">Ver trailer</a> <!--link para el trailer-->
+                  <a href="https://store.steampowered.com/app/1229490/ULTRAKILL" class="btn my-custom-btn"target="_blank">Pre-ordena ya!!!</a> <!--link para steam-->
                 </p>
             </div>
             </div>
@@ -66,49 +111,49 @@
 
     <div class="album py-5 bg-light"> 
       <div class="container">
-        <h2 class="text-center mb-5">Contenido</h2>
+        <h2 id="contenido" class="text-center vcr-font">Contenido</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           
-          <!-- Card 1 -->
+          <!-- CARTA 1 -->
           <div class="col">
             <div class="card shadow-sm">
-              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070" class="card-img-top" style="height: 225px; object-fit: cover;" alt="Proyecto 1">
+              <img src="https://tiermaker.com/images/template_images/2022/677714/ultrakill-weapons-up-to-date-as-of-cybergrind-upd8-677714/ultrakill02png.png" class="card-img-top" style="height: 225px; object-fit: cover;" alt="Proyecto 1">
               <div class="card-body">
-                <h5 class="card-title">Armas</h5>
+                <h5 class="card-title vcr-font">Armas</h5>
                 <p class="card-text">El principal método de combate para los jugadores en ULTRAKILL.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Ver Demo</button>
-                  <small class="text-muted">HTML, CSS, JS</small>
+                  <a href="https://ultrakill.wiki.gg/wiki/Weapons" target="_blank" class="btn my-custom-btn">Ir a ver</a>
+                  <small class="text-muted">Mechanics, Damage modifiers...</small>
                 </div>
               </div>
             </div>
           </div>
     
-          <!-- Card 2 -->
+          <!-- CARTA 2 -->
           <div class="col">
             <div class="card shadow-sm">
-              <img src="https://images.unsplash.com/photo-1550063873-ab792950096b?q=80&w=2070" class="card-img-top" style="height: 225px; object-fit: cover;" alt="Proyecto 2">
+              <img src="https://tiermaker.com/images//media/template_images/2024/1538295/ultrakill-all-levels-violence-layer-1538295/zzzzz-174076317001.png" class="card-img-top" style="height: 225px; object-fit: cover;" alt="Proyecto 2">
               <div class="card-body">
-                <h5 class="card-title">Niveles</h5>
+                <h5 class="card-title vcr-font">Niveles</h5>
                 <p class="card-text">Ultrakill está dividido en varios niveles, que son divididos en un preludio y tres actos.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Ver Demo</button>
-                  <small class="text-muted">Bootstrap</small>
+                  <a href="https://ultrakill.wiki.gg/wiki/Levels" target="_blank" class="btn my-custom-btn">Ir a ver</a>
+                  <small class="text-muted">Types, Challenges, Secrets...</small>
                 </div>
               </div>
             </div>
           </div>
     
-          <!-- Card 3 -->
+          <!-- CARTA 3 -->
           <div class="col">
             <div class="card shadow-sm">
-              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070" class="card-img-top" style="height: 225px; object-fit: cover;" alt="Proyecto 3">
+              <img src="https://ultrakill.wiki.gg/images/thumb/e/e7/New_Yellow_Store_Terminal.png/300px-New_Yellow_Store_Terminal.png?509c07" class="card-img-top" style="height: 225px; object-fit: cover;" alt="Proyecto 3">
               <div class="card-body">
-                <h5 class="card-title">Lore</h5>
+                <h5 class="card-title vcr-font">Lore</h5>
                 <p class="card-text">Combina la historia, los entornos y el gameplay, creando un mundo que el jugador experimenta.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Ver Demo</button>
-                  <small class="text-muted">HTML, CSS, JS</small>
+                  <a href="https://ultrakill.wiki.gg/wiki/Lore" target="_blank" class="btn my-custom-btn">Ir a ver</a>
+                  <small class="text-muted">Earth events, Hell events...</small>
                 </div>
               </div>
             </div>
@@ -126,7 +171,7 @@
 
     <section class="py-5">
         <div class="container">
-          <h2 class="text-center mb-5">Reseñas</h2>
+          <h2 id="resenas" class="text-center mb-5 vcr-font">Reseñas</h2>
           <div id="testimonialCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -159,7 +204,7 @@
 
     <section class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-5">Contacto</h2>
+    <h2 id="contacto" class="text-center mb-5 vcr-font">Contacto</h2>
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <form>
@@ -172,6 +217,8 @@
     </div>
   </div>
 </section>
+
+<!--PARA EL PIE DE PÁGINA-->
 <footer class="py-4 bg-dark text-white text-center">
   <div class="container">
     <p class="mb-2">©New Blood Interactive - All rights reserved.</p>
